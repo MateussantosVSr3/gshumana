@@ -1,0 +1,11 @@
+Work Item Type,Title,Description,Tags
+Test Case,TC01 - Exibir risco vigente,"Pré-condição: API com leitura válida. Passos: abrir app e atualizar. Entrada: 35 C e 70%. Esperado: nível alto/extremo, orientação e horário.",ClimaCidadao;Positivo
+Test Case,TC02 - API indisponível,"Pré-condição: API desligada. Passos: abrir app. Esperado: aviso offline e dado marcado como salvo ou demonstração.",ClimaCidadao;Negativo
+Test Case,TC03 - Listar pontos acessíveis,"Pré-condição: API disponível. Passos: abrir Pontos seguros. Esperado: pontos acessíveis com estado de verificação.",ClimaCidadao;Positivo
+Test Case,TC04 - Enviar relato válido,"Entrada: descrição anônima com 20 caracteres. Esperado: HTTP 201 e confirmação.",ClimaCidadao;Positivo
+Test Case,TC05 - Rejeitar descrição curta,"Entrada: menos de 10 caracteres. Esperado: validação impede envio.",ClimaCidadao;Negativo
+Test Case,TC06 - Rejeitar PII,"Entrada: CPF fictício 123.456.789-00. Esperado: HTTP 400 e indicação para remover PII.",ClimaCidadao;Negativo
+Test Case,TC07 - Criar leitura válida,"Entrada: 35 C, 70%, Bela Vista. Esperado: HTTP 201 e persistência.",ClimaCidadao;Positivo
+Test Case,TC08 - Rejeitar umidade inválida,"Entrada: 35 C e 150%. Esperado: HTTP 400 e nenhuma persistência.",ClimaCidadao;Negativo
+Test Case,TC09 - Filtrar por bairro,"Entrada: neighborhood=Bela Vista. Esperado: somente leituras do bairro.",ClimaCidadao;Positivo
+Test Case,TC10 - Recuperar processo,"Passos: encerrar PID, aguardar e chamar /health. Esperado: systemd reinicia e API retorna 200.",ClimaCidadao;Negativo

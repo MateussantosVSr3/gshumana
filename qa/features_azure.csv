@@ -1,0 +1,6 @@
+Work Item Type,Title,Description,Acceptance Criteria,Tags
+Feature,Consultar risco térmico,"Exibir nível, sensação térmica, horário e orientação ao cidadão.","Dado que exista leitura válida; quando abrir o início; então nível e orientação aparecem. Falha da API deve identificar cache ou demonstração. Nível não depende apenas de cor.",ClimaCidadao;GS2026
+Feature,Encontrar ponto seguro,"Listar água, sombra e apoio acessível.","Mostrar nome, endereço, tipo, acessibilidade e verificação. Ponto não verificado deve ser rotulado.",ClimaCidadao;GS2026
+Feature,Relatar problema anonimamente,"Permitir relato sem conta ou identificação.","Descrição entre 10 e 280 caracteres. Não solicitar PII. Bloquear CPF, e-mail, telefone e CEP.",ClimaCidadao;GS2026
+Feature,Ingerir leitura do sensor,"Receber temperatura e umidade do ESP32.","Leitura válida retorna 201. Valores fora dos limites retornam 400 e não são persistidos.",ClimaCidadao;GS2026
+Feature,Manter serviço disponível,"Monitorar e reiniciar a API após falha.","Serviço inicia no boot, reinicia após falha e registra CPU, memória, disco e saúde.",ClimaCidadao;GS2026

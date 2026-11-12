@@ -1,0 +1,75 @@
+openapi: 3.0.3
+info:
+  title: ClimaCidadão API
+  version: 1.0.0
+  description: API acadêmica para leituras ambientais, risco térmico, pontos seguros e relatos anônimos.
+servers:
+  - url: http://localhost:5080
+paths:
+  /health:
+    get:
+      summary: Verifica a saúde do serviço
+      responses:
+        '200': { description: Serviço saudável }
+  /api/v1/readings:
+    get:
+      summary: Lista leituras recentes
+      parameters:
+        - { name: neighborhood, in: query, schema: { type: string } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100 } }
+      responses:
+        '200': { description: Lista de leituras }
+    post:
+      summary: Registra uma leitura ambiental
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ReadingRequest' }
+      responses:
+        '201': { description: Leitura criada }
+        '400': { description: Entrada inválida }
+  /api/v1/risk/latest:
+    get:
+      summary: Calcula o risco da leitura mais recente
+      parameters:
+        - { name: neighborhood, in: query, schema: { type: string } }
+      responses:
+        '200': { description: Avaliação de risco }
+        '404': { description: Sem leitura }
+  /api/v1/safe-points:
+    get:
+      summary: Lista pontos seguros
+      parameters:
+        - { name: accessible, in: query, schema: { type: boolean } }
+      responses:
+        '200': { description: Lista de pontos }
+  /api/v1/reports:
+    post:
+      summary: Registra relato anônimo sem PII
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ReportRequest' }
+      responses:
+        '201': { description: Relato criado }
+        '400': { description: Entrada inválida ou PII detectada }
+components:
+  schemas:
+    ReadingRequest:
+      type: object
+      required: [temperatureC, humidityPercent, source, neighborhood]
+      properties:
+        temperatureC: { type: number, minimum: -10, maximum: 60 }
+        humidityPercent: { type: number, minimum: 0, maximum: 100 }
+        source: { type: string, maxLength: 40 }
+        neighborhood: { type: string, maxLength: 80 }
+        observedAt: { type: string, format: date-time, nullable: true }
+    ReportRequest:
+      type: object
+      required: [category, neighborhood, description]
+      properties:
+        category: { type: string, enum: [sem-agua, sem-sombra, ponto-fechado, outro] }
+        neighborhood: { type: string, maxLength: 80 }
+        description: { type: string, minLength: 10, maxLength: 280 }

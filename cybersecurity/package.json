@@ -1,0 +1,6 @@
+{
+  "name": "climacidadao-security",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test", "audit": "node src/audit-demo.js" }
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=ClimaCidadao API
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=climacidadao
+Group=climacidadao
+WorkingDirectory=/opt/climacidadao
+ExecStart=/usr/bin/dotnet /opt/climacidadao/ClimaCidadao.Api.dll
+Environment=ASPNETCORE_URLS=http://0.0.0.0:5080
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/climacidadao /var/log/climacidadao
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,41 @@
+@host = http://localhost:5080
+
+### Saúde
+GET {{host}}/health
+
+### Criar leitura válida
+POST {{host}}/api/v1/readings
+Content-Type: application/json
+
+{
+  "temperatureC": 35,
+  "humidityPercent": 70,
+  "source": "http-demo-01",
+  "neighborhood": "Bela Vista"
+}
+
+### Consultar risco
+GET {{host}}/api/v1/risk/latest?neighborhood=Bela%20Vista
+
+### Pontos seguros acessíveis
+GET {{host}}/api/v1/safe-points?accessible=true
+
+### Relato anônimo válido
+POST {{host}}/api/v1/reports
+Content-Type: application/json
+
+{
+  "category": "sem-sombra",
+  "neighborhood": "Bela Vista",
+  "description": "O ponto de ônibus está sem cobertura durante a tarde."
+}
+
+### PII deve ser rejeitada com HTTP 400
+POST {{host}}/api/v1/reports
+Content-Type: application/json
+
+{
+  "category": "outro",
+  "neighborhood": "Bela Vista",
+  "description": "Meu CPF fictício é 123.456.789-00 e quero relatar calor."
+}
