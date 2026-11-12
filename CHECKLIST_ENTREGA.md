@@ -15,7 +15,7 @@
 - [x] Repositório criado: https://github.com/MateussantosVSr3/gshumana
 - [ ] Importar/cadastrar Features e Test Cases no Azure Boards; adicionar o professor como Admin.
 - [ ] Atualizar `qa/RELATORIO_QA.html` com o link do Azure e gerar novamente o PDF.
-- [ ] Criar/importar o circuito em Wokwi e preencher seu link.
+- [x] Circuito publicado e testado no Wokwi: https://wokwi.com/projects/480451288503952385
 - [ ] Gravar vídeos: mobile (até 3 min), IoT (até 4 min), ML (até 5 min), Linux (até 7 min) e pitch geral (até 4 min).
 - [ ] Publicar vídeos como “não listado” e inserir os links nos READMEs.
 

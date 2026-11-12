@@ -39,6 +39,8 @@ ESP32/DHT22 ─────────────> API .NET ─────> S
 - `infra/`: provisionamento Linux, serviço `systemd`, monitoramento, logs e teste de falha.
 - `cybersecurity/`: regras de PII, análise de fluxo contaminado (*taint*) e cálculo do indicador Risco Cidadão.
 - `qa/`: Features e Test Cases prontos para cadastrar/importar no Azure Boards, além do documento de contingência.
+
+Projeto Wokwi publicado: https://wokwi.com/projects/480451288503952385
 - `docs/`: pesquisa, privacidade, roteiros e checklist final.
 
 ## Execução rápida

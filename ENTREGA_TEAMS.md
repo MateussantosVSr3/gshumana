@@ -28,7 +28,7 @@ Provisionamento, systemd, monitoramento, logs e teste de falha em `infra/`. Demo
 
 ## Physical Computing
 
-ESP32/DHT22 em `iot/`. Importar no Wokwi e acrescentar o link público. O arquivo `integrantes.txt` já está preenchido.
+ESP32/DHT22 em `iot/`. Projeto publicado e testado: https://wokwi.com/projects/480451288503952385. O arquivo `integrantes.txt` já está preenchido.
 
 ## Testing, Compliance & QA
 
