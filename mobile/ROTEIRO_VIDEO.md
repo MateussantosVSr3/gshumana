@@ -1,5 +1,9 @@
 # Roteiro do vídeo — Mobile Development & IoT (até 3 minutos)
 
+**Limite:** no máximo 3 minutos. **Duração recomendada:** entre 2min40s e 2min55s.
+
+Este roteiro já está escrito para ser lido durante a gravação. Os textos entre aspas são as falas; as instruções fora das aspas indicam o que deve aparecer na tela.
+
 ## Preparação
 
 1. Inicie a API:
@@ -48,27 +52,31 @@ Não é necessário abrir código durante o vídeo. Se o tempo permitir, mostre 
 
 ## 0:00–0:25 — Problema e solução
 
-> O Clima Cidadão ajuda pessoas expostas ao calor no Jardim Marquesa a reconhecer o risco térmico, encontrar pontos de água ou sombra e relatar problemas sem fornecer dados pessoais. O aplicativo consome a mesma API alimentada pelo ESP32.
+Deixe a tela inicial aberta, mostrando `Jardim Marquesa` e o selo `AO VIVO`.
+
+> “Este é o Clima Cidadão, uma solução criada para apoiar moradores do Jardim Marquesa em períodos de calor intenso. Pelo aplicativo, a pessoa consegue consultar o risco térmico, encontrar pontos de água ou sombra e relatar problemas no bairro. Nesta versão piloto, o território é previamente configurado e nenhuma localização precisa do usuário é coletada.”
 
 ## 0:25–1:05 — Tela de risco
 
 Mostre a tela inicial conectada à API.
 
-> A tela apresenta o nível por texto e cor, a sensação térmica e uma orientação simples. O nível não depende apenas da cor e os elementos possuem rótulos de acessibilidade. Esta informação veio da leitura armazenada pela API.
+> “Na tela inicial, o aplicativo apresenta o risco por texto e por cor, a sensação térmica calculada e uma orientação preventiva. Aqui temos o nível alto, com sensação térmica de aproximadamente cinquenta graus. Como o nível também aparece escrito, a informação não depende somente da percepção das cores. Os principais elementos ainda possuem rótulos de acessibilidade.”
 
-Toque em “Atualizar informação”. Se possível, mostre rapidamente o endpoint `/api/v1/risk/latest` no Swagger.
+Toque em `Atualizar informação`. Em seguida, abra o Swagger, expanda `GET /api/v1/risk/latest`, clique em `Try it out` e depois em `Execute`. Mostre `level: High` e `heatIndexC: 50.3` por poucos segundos.
+
+> “Ao atualizar, o aplicativo consulta o endpoint de risco mais recente. No Swagger podemos confirmar a mesma resposta recebida pelo app. Essa leitura foi armazenada pela API e pode ser alimentada pelo circuito com ESP32.”
 
 ## 1:05–1:35 — Pontos seguros
 
 Abra “Encontrar água e sombra”.
 
-> A segunda jornada consulta pontos de apoio acessíveis. Cada item informa endereço, tipo, acessibilidade e se foi verificado, evitando apresentar um local não confirmado como confiável.
+> “Na segunda jornada, o usuário encontra pontos de apoio próximos. Cada item informa nome, endereço, tipo de apoio, acessibilidade e estado de verificação. O ponto da Rua Candelária ainda aguarda validação da comunidade, e isso é mostrado claramente para não apresentar uma informação não confirmada como totalmente confiável.”
 
 ## 1:35–2:10 — Relato anônimo
 
 Abra “Relatar problema no local”. Digite uma descrição anônima com pelo menos dez caracteres e envie.
 
-> O relato não solicita nome, telefone, diagnóstico ou endereço residencial. A tela limita a descrição a 280 caracteres, e a API rejeita padrões de dados pessoais antes da persistência.
+> “O morador também pode colaborar enviando um relato anônimo. Vou informar que existe um ponto sem sombra no período da tarde. A tela não solicita nome, telefone, condição médica ou endereço residencial, limita o texto a duzentos e oitenta caracteres e orienta o usuário a não inserir dados pessoais. A API também valida o conteúdo antes de armazená-lo.”
 
 Mostre a confirmação de envio. Não use dados pessoais reais.
 
@@ -76,13 +84,15 @@ Mostre a confirmação de envio. Não use dados pessoais reais.
 
 Depois de carregar os dados uma vez, desligue a API ou a conexão e volte à tela inicial.
 
-> O aplicativo usa SQLite para guardar a última leitura e a lista de pontos. Sem conexão, ele exibe claramente que o conteúdo é salvo ou demonstrativo, em vez de fingir que o dado é atual.
+> “Para situações de conexão instável, o aplicativo utiliza SQLite para guardar a última leitura e a lista de pontos consultados. Quando a API fica indisponível, a tela informa que está exibindo conteúdo salvo ou demonstrativo, em vez de tratar um dado antigo como se fosse atual.”
 
 Mostre o aviso amarelo de modo offline.
 
 ## 2:40–3:00 — Encerramento
 
-> Assim, o aplicativo conecta os dados ambientais à decisão do cidadão, oferece apoio próximo, preserva privacidade e mantém informação útil em condição offline. Trata-se de um protótipo preventivo, e os alertas oficiais sempre prevalecem.
+Volte à tela inicial para encerrar.
+
+> “Assim, o Clima Cidadão integra o circuito com ESP32, a API e o aplicativo mobile para transformar dados ambientais em orientações úteis. A solução oferece apoio próximo, preserva a privacidade e mantém informações disponíveis mesmo com conexão instável. Este é um protótipo preventivo, e os alertas oficiais sempre prevalecem.”
 
 ## Evidências que devem aparecer
 
