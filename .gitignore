@@ -8,6 +8,7 @@
 **/.expo/
 **/.pio/
 *.db
+*.db-*
 .edge-qa/
 infra/publish/
 ml/dados/*.csv
@@ -15,3 +16,4 @@ ml/dados/*.CSV
 ml/dados/*.zip
 *.log
 GS CitizenTech*.pdf
+iot/sketch/

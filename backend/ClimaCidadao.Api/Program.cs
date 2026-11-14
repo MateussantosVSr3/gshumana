@@ -2,6 +2,7 @@ using ClimaCidadao.Api.Data;
 using ClimaCidadao.Api.Domain;
 using ClimaCidadao.Api.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(o => o.UseSqlite(builder.Configuration.GetConnectionString("ClimaCidadao")));
@@ -9,6 +10,8 @@ builder.Services.AddScoped<IRiskService, RiskService>();
 builder.Services.AddSingleton<IPiiGuard, PiiGuard>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureHttpJsonOptions(options =>
+    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddCors(o => o.AddDefaultPolicy(p => p.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(_ => true)));
 
 var app = builder.Build();

@@ -3,8 +3,13 @@ Description=Monitor ClimaCidadao
 After=climacidadao.service
 [Service]
 Type=simple
-ExecStart=/opt/climacidadao/infra/monitor.sh
+User=climacidadao
+Group=climacidadao
+ExecStart=/usr/local/bin/climacidadao-monitor
 Restart=always
 RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/log/climacidadao
 [Install]
 WantedBy=multi-user.target

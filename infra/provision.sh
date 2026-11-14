@@ -15,10 +15,11 @@ if ! command -v dotnet >/dev/null; then
 fi
 cp -a ./publish/. "$APP_DIR/"
 chown -R "$SERVICE_USER:$SERVICE_USER" "$APP_DIR"
+install -m 0755 ./monitor.sh /usr/local/bin/climacidadao-monitor
 install -m 0644 ./climacidadao.service /etc/systemd/system/climacidadao.service
 install -m 0644 ./climacidadao-monitor.service /etc/systemd/system/climacidadao-monitor.service
 systemctl daemon-reload
 systemctl enable --now climacidadao climacidadao-monitor
 hostnamectl set-hostname climacidadao
-echo "127.0.1.1 climacidadao" >> /etc/hosts
+grep -qE '^127\.0\.1\.1[[:space:]]+climacidadao$' /etc/hosts || echo "127.0.1.1 climacidadao" >> /etc/hosts
 systemctl --no-pager status climacidadao

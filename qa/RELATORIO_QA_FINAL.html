@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>ClimaCidadão — QA</title>
+  <style>
+    @page { size: A4; margin: 18mm; }
+    body { font: 14px Arial; color: #18343d; line-height: 1.45; }
+    h1, h2 { color: #006d77; page-break-after: avoid; }
+    table { border-collapse: collapse; width: 100%; font-size: 11px; }
+    th, td { border: 1px solid #999; padding: 5px; vertical-align: top; }
+    th { background: #dff3f4; }
+    .shot { border: 2px dashed #999; padding: 35px; text-align: center; margin: 12px 0; color: #666; }
+    .break { page-break-before: always; }
+  </style>
+</head>
+<body>
+  <h1>ClimaCidadão — Evidências de Testing, Compliance & QA</h1>
+  <p><b>Equipe:</b> Mateus Santos da Silva (RM 558436), Nickolas Moreno Cardoso (RM 557132), André Giovane de Maria (RM 556384).</p>
+  <p><b>Azure Boards:</b> <a href="https://dev.azure.com/RM558436/gstemperatura">https://dev.azure.com/RM558436/gstemperatura</a></p>
+
+  <h2>Escopo</h2>
+  <p>Homologação das jornadas de risco térmico, pontos seguros, relato anônimo, sensor e resiliência operacional.</p>
+
+  <h2>Features</h2>
+  <p>As cinco Features e critérios de aceite estão documentados em <code>features.md</code> e cadastrados no Azure Boards com os IDs 13 a 17.</p>
+  <div class="shot">INSERIR PRINT DA LISTA DE FEATURES NO AZURE</div>
+  <div class="shot">INSERIR PRINT DOS DETALHES/CRITÉRIOS DAS FEATURES</div>
+
+  <h2 class="break">Test Cases</h2>
+  <p>Os dez casos de caixa-preta, positivos e negativos, estão documentados em <code>test_cases.csv</code> e cadastrados com os IDs 18 a 27. Todos possuem passos, entradas, resultados esperados e relação <i>Tested By</i> com a Feature correspondente.</p>
+  <div class="shot">INSERIR PRINT DA LISTA DE TEST CASES</div>
+  <div class="shot">INSERIR PRINT DOS PASSOS, INPUTS E OUTPUTS DOS CASOS</div>
+
+  <h2>Rastreabilidade</h2>
+  <table>
+    <tr><th>Feature no Azure</th><th>Casos relacionados</th></tr>
+    <tr><td>#13 — Consultar risco térmico</td><td>#18–#19</td></tr>
+    <tr><td>#14 — Encontrar ponto seguro</td><td>#20</td></tr>
+    <tr><td>#15 — Relatar problema anonimamente</td><td>#21–#23</td></tr>
+    <tr><td>#16 — Ingerir leitura do sensor</td><td>#24–#26</td></tr>
+    <tr><td>#17 — Manter serviço disponível</td><td>#27</td></tr>
+  </table>
+
+  <h2>Conclusão</h2>
+  <p>A estrutura de homologação foi cadastrada no Azure Boards: cinco Features, dez Test Cases e rastreabilidade entre requisitos e testes. Na validação local, a API compilou, quatro testes xUnit passaram e os fluxos de saúde, leitura válida e inválida, filtro por bairro, relato anônimo, bloqueio de PII, pontos acessíveis, risco e Swagger foram aprovados. A homologação final depende das evidências visuais do aplicativo e do teste de recuperação na VM Ubuntu.</p>
+</body>
+</html>
+

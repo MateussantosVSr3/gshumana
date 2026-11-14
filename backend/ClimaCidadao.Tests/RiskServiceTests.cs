@@ -1,5 +1,6 @@
 using ClimaCidadao.Api.Domain;
 using ClimaCidadao.Api.Services;
+using Xunit;
 
 namespace ClimaCidadao.Tests;
 

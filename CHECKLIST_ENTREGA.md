@@ -7,14 +7,16 @@
 - [ ] Adicionar fotos próprias do território em `docs/evidencias/` sem rostos/placas identificáveis.
 - [ ] Revisar cidade/bairro caso a equipe escolha outro recorte.
 - [ ] Executar API, testes e app; substituir os espaços de evidência por prints reais.
-- [ ] Baixar dados oficiais do INMET e executar todas as células do notebook.
-- [ ] Exportar o notebook já executado e revisar `ml/RELATORIO_ML.md` com as métricas obtidas.
+- [x] Baixar dados oficiais do INMET e executar todas as células do notebook.
+- [x] Salvar o notebook executado e revisar `ml/RELATORIO_ML.md` com as métricas obtidas.
 
 ## Links externos obrigatórios
 
 - [x] Repositório criado: https://github.com/MateussantosVSr3/gshumana
-- [ ] Importar/cadastrar Features e Test Cases no Azure Boards; adicionar o professor como Admin.
-- [ ] Atualizar `qa/RELATORIO_QA.html` com o link do Azure e gerar novamente o PDF.
+- [x] Cadastrar cinco Features e dez Test Cases no Azure Boards, com passos e rastreabilidade.
+- [ ] Adicionar o professor como Admin no projeto Azure.
+- [x] Atualizar o relatório de QA com o link/IDs do Azure e gerar novamente o PDF-base.
+- [ ] Inserir os prints reais do Azure em `qa/RELATORIO_QA_FINAL.html` e gerar o PDF final.
 - [x] Circuito publicado e testado no Wokwi: https://wokwi.com/projects/480451288503952385
 - [ ] Gravar vídeos: mobile (até 3 min), IoT (até 4 min), ML (até 5 min), Linux (até 7 min) e pitch geral (até 4 min).
 - [ ] Publicar vídeos como “não listado” e inserir os links nos READMEs.
@@ -23,7 +25,7 @@
 
 - [ ] SOA/Web Services: link do GitHub, Swagger e evidências da API.
 - [x] Cybersecurity: ZIP do módulo e prints do indicador gerados; falta apenas eventual vídeo exigido pelo professor.
-- [ ] C#: link do GitHub com API, EF Core, LINQ e documentação.
+- [x] C#: API, EF Core, LINQ, documentação e quatro testes xUnit validados; falta apenas o envio do link.
 - [ ] ML: `ml/`, `RELATORIO_ML.md` e vídeo.
 - [ ] Mobile: código, Ficha, instruções, prints e vídeo.
 - [ ] Operating Systems: scripts, configs, evidências e vídeo.

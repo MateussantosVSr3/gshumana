@@ -1,6 +1,6 @@
 $ErrorActionPreference='Stop'
 $browser='C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'
-$html=(Resolve-Path "$PSScriptRoot\RELATORIO_QA.html").Path -replace '\\','/'
+$html=(Resolve-Path "$PSScriptRoot\RELATORIO_QA_FINAL.html").Path -replace '\\','/'
 $out=Join-Path $PSScriptRoot 'RELATORIO_QA.pdf'
 $profile=Join-Path $env:TEMP 'climacidadao-edge-pdf'
 & $browser --headless=new --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --no-first-run --no-sandbox --user-data-dir="$profile" --print-to-pdf="$out" "file:///$html"

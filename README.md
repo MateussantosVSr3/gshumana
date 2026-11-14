@@ -48,10 +48,10 @@ Projeto Wokwi publicado: https://wokwi.com/projects/480451288503952385
 ### API (requer .NET 8 SDK)
 
 ```bash
-cd backend/ClimaCidadao.Api
-dotnet restore
-dotnet ef database update
-dotnet run
+cd backend
+dotnet restore ClimaCidadao.sln
+dotnet test ClimaCidadao.sln
+dotnet run --project ClimaCidadao.Api --urls http://localhost:5080
 ```
 
 Swagger: `http://localhost:5080/swagger`. Para testes: `dotnet test backend/ClimaCidadao.sln`.
@@ -68,7 +68,13 @@ Defina `EXPO_PUBLIC_API_URL=http://SEU_IP:5080` para usar a API; sem ela, o app 
 
 ### ML
 
-Baixe os CSVs anuais oficiais conforme `ml/dados/README.md`, instale `ml/requirements.txt` e execute todas as células de `ml/clima_cidadao.ipynb`. Dados simulados não são usados no treinamento.
+O notebook foi executado com os CSVs oficiais de 2024 e 2025. Para reproduzir download, ambiente e treinamento:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ml\executar.ps1
+```
+
+Dados simulados não são usados no treinamento.
 
 ## Integrantes
 

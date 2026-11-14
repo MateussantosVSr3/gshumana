@@ -16,11 +16,11 @@ Módulo compactável em `cybersecurity/`, com regras PII, taint analysis, testes
 
 ## Inteligência Artificial & Machine Learning
 
-Notebook, dados/README, requisitos e relatório em `ml/`. Antes do envio, executar `ml/executar.ps1`, revisar métricas reais e salvar o notebook executado.
+Notebook executado com dados oficiais do INMET, documentação de integridade, relatório com métricas reais e roteiro em `ml/`. F1 final de teste: 0,796.
 
 ## Mobile Development & IoT
 
-App Expo/TypeScript em `mobile/`, consumindo API e persistindo cache em SQLite. Acrescentar prints reais.
+App Expo/TypeScript em `mobile/`, consumindo API e persistindo cache em SQLite. TypeScript, Expo Doctor e bundle Android validados. Acrescentar prints reais e vídeo.
 
 ## Operating Systems
 
@@ -32,4 +32,4 @@ ESP32/DHT22 em `iot/`. Projeto publicado e testado: https://wokwi.com/projects/4
 
 ## Testing, Compliance & QA
 
-Features e Test Cases em `qa/`, incluindo CSVs para Azure. Acrescentar URL do projeto Azure e prints reais ao relatório antes de regenerar o PDF.
+Features e Test Cases cadastrados e relacionados em https://dev.azure.com/RM558436/gstemperatura. CSVs e documentação detalhada estão em `qa/`. Acrescentar os prints reais ao relatório antes do PDF final.
