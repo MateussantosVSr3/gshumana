@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clima Cidadão — Fluxo de integração IoT</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #eef5f3; color: #123b43; font-family: Inter, "Segoe UI", Arial, sans-serif; }
+    main { width: min(1180px, 94vw); padding: 48px 54px; background: #fff; border-radius: 30px; box-shadow: 0 18px 60px #123b4320; }
+    .eyebrow { margin: 0 0 10px; color: #087f7a; font-size: 15px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(32px, 4vw, 54px); letter-spacing: -.04em; }
+    .lead { margin: 12px 0 38px; color: #5d747a; font-size: 20px; }
+    .flow { display: flex; align-items: center; justify-content: center; gap: 13px; }
+    .node { min-width: 154px; padding: 22px 16px; text-align: center; border: 2px solid #d9e9e6; border-radius: 20px; background: #f7faf9; }
+    .node strong { display: block; font-size: 20px; }
+    .node span { display: block; margin-top: 7px; color: #687e83; font-size: 14px; line-height: 1.35; }
+    .sensor, .mobile { background: #e1f2ee; border-color: #a8d5cc; }
+    .esp { position: relative; color: #fff; background: #087f7a; border-color: #087f7a; }
+    .esp span { color: #d7f2ef; }
+    .api { background: #fff5e9; border-color: #f0c895; }
+    .arrow { color: #087f7a; font-size: 34px; font-weight: 300; }
+    .branch { width: 225px; margin: 24px 0 0 222px; padding: 16px 18px; border-left: 3px solid #e19a2b; border-bottom: 3px solid #e19a2b; border-radius: 0 0 0 18px; }
+    .alert { display: flex; align-items: center; gap: 13px; padding: 16px; background: #fff5e9; border-radius: 16px; }
+    .alert .icon { font-size: 28px; }
+    .alert strong { display: block; font-size: 18px; color: #9a5b00; }
+    .alert span { display: block; margin-top: 3px; color: #7e6a4b; font-size: 14px; }
+    footer { margin-top: 34px; padding-top: 20px; border-top: 1px solid #e2ecea; color: #60777c; font-size: 17px; }
+    footer strong { color: #123b43; }
+    @media (max-width: 900px) { main { padding: 32px 24px; } .flow { flex-wrap: wrap; } .arrow { transform: rotate(90deg); } .node { width: 100%; } .branch { width: 100%; margin: 20px 0 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Clima Cidadão</p>
+    <h1>Do ambiente à orientação para o morador</h1>
+    <p class="lead">O ESP32 conecta a medição física ao restante da solução.</p>
+
+    <section class="flow" aria-label="Fluxo principal da solução">
+      <div class="node sensor"><strong>DHT22</strong><span>Temperatura<br>e umidade</span></div>
+      <div class="arrow">→</div>
+      <div class="node esp"><strong>ESP32</strong><span>Processa e envia<br>a leitura</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><strong>POST</strong><span>/api/v1/readings<br>JSON + HTTP 201</span></div>
+      <div class="arrow">→</div>
+      <div class="node api"><strong>API + SQLite</strong><span>Armazena e<br>calcula o risco</span></div>
+      <div class="arrow">→</div>
+      <div class="node mobile"><strong>Aplicativo</strong><span>Informa e orienta<br>o morador</span></div>
+    </section>
+
+    <section class="branch" aria-label="Alerta local">
+      <div class="alert"><div class="icon">↳</div><div><strong>LED + buzzer</strong><span>Alerta local imediato, mesmo sem a API</span></div></div>
+    </section>
+
+    <footer><strong>Fluxo integrado:</strong> sensor → processamento local → API → informação útil para a comunidade.</footer>
+  </main>
+</body>
+</html>

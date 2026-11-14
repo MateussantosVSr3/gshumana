@@ -70,6 +70,8 @@ DHT22 → ESP32 → POST /api/v1/readings → API/SQLite → aplicativo
           └──→ LED e buzzer para alerta local
 ```
 
+Abra `FLUXO_INTEGRACAO.html` em tela cheia e mostre o slide por cerca de 15 segundos enquanto explica esse caminho. Depois volte ao Wokwi para identificar os mesmos componentes no circuito.
+
 ## 1:10–1:50 — Componentes e código
 
 **Fala sugerida:**
