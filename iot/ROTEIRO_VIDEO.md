@@ -80,10 +80,16 @@ Abra `FLUXO_INTEGRACAO.html` em tela cheia e mostre o slide por cerca de 15 segu
 
 Mostre brevemente no `sketch.ino`:
 
-- a leitura do DHT22;
-- a condição `danger`;
-- a URL `/api/v1/readings`;
-- a criação do JSON e o `http.POST(json)`.
+- linhas **5–8**: pinos do DHT22, LED e buzzer, além da URL `/api/v1/readings`;
+- linha **15**: configuração do DHT22;
+- linha **31**: leitura de temperatura e umidade com `getTempAndHumidity()`;
+- linhas **39–40**: condição `danger`;
+- linhas **42–47**: acionamento do LED e do buzzer;
+- linhas **55–59**: intervalo de envio e preparação da requisição HTTP;
+- linhas **61–64**: criação do JSON;
+- linha **66**: envio com `http.POST(json)` e exibição do código HTTP.
+
+No VS Code, use `Ctrl+G`, digite o número da linha e pressione Enter para ir diretamente a cada trecho durante a gravação.
 
 **Fala sugerida:**
 
