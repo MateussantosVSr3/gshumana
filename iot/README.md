@@ -6,7 +6,7 @@ O DHT22 mede temperatura/umidade. Em risco local, LED e buzzer alertam; a leitur
 
 1. Instale PlatformIO e Wokwi Simulator no VS Code.
 2. Abra esta pasta no VS Code; `platformio.ini` já aponta para `sketch.ino`.
-3. Execute `pio run`; `wokwi.toml` usa o firmware gerado e encaminha a porta 5080 para a API local.
+3. Execute `pio run`; `wokwi.toml` usa o firmware gerado e o gateway Wi-Fi integrado resolve `host.wokwi.internal` para acessar a API local na porta 5080.
 4. Inicie a simulação e altere temperatura/umidade clicando no DHT22.
 
 Projeto público e testado no Wokwi: https://wokwi.com/projects/480451288503952385

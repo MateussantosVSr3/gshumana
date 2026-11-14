@@ -10,7 +10,7 @@
    ```
 
 2. Confirme que o Swagger abre em `http://localhost:5080/swagger`.
-3. No VS Code, abra `D:\GS\iot`, execute `pio run` e inicie o Wokwi Simulator. O arquivo `wokwi.toml` encaminha a porta 5080 para a API local.
+3. No VS Code, abra `D:\GS\iot`, execute `pio run` e inicie o Wokwi Simulator. O gateway Wi-Fi integrado do simulador permite que `host.wokwi.internal:5080` alcance a API local.
 4. Deixe preparados para a gravação:
    - circuito no Wokwi;
    - monitor serial;
