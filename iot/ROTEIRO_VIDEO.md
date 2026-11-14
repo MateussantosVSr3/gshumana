@@ -19,6 +19,36 @@
 
 > O projeto público comprova o circuito no Wokwi, mas a demonstração integrada com a API local deve ser executada pelo Wokwi Simulator no VS Code.
 
+## Sequência exata das telas na gravação
+
+1. **Wokwi — visão completa do circuito**
+   - mostre ESP32, DHT22, LED e buzzer;
+   - apresente brevemente o objetivo do Clima Cidadão e explique que o circuito é a camada de coleta e alerta local.
+2. **VS Code — arquivo `sketch.ino`**
+   - mostre rapidamente os pinos 15, 18 e 19;
+   - localize a condição `danger`;
+   - mostre a URL `/api/v1/readings`, a criação do JSON e `http.POST(json)`;
+   - não leia o código linha por linha.
+3. **Wokwi — condição normal**
+   - inicie a simulação e mostre o autoteste;
+   - configure o DHT22 com 28 °C e 50%;
+   - mostre no monitor serial que o risco está normal e os atuadores estão desligados.
+4. **Wokwi — condição de risco**
+   - altere o DHT22 para 35 °C e 70%;
+   - mostre o LED aceso, o buzzer ativo e os valores no monitor serial;
+   - aguarde aparecer `API HTTP: 201`.
+5. **Swagger — comprovação da comunicação**
+   - abra `GET /api/v1/readings`, clique em `Try it out` e use `Jardim Marquesa`;
+   - clique em `Execute`;
+   - mostre `source: wokwi-esp32-01` e os mesmos valores exibidos no Wokwi;
+   - abra rapidamente `GET /api/v1/risk/latest` e mostre o risco `High`.
+6. **Aplicativo — resultado para o usuário**
+   - volte à tela inicial do app e toque em `Atualizar informação`;
+   - mostre que o risco do bairro foi atualizado;
+   - encerre explicando o fluxo `sensor → API → aplicativo`.
+
+Deixe essas quatro janelas abertas antes de iniciar a gravação: Wokwi, `sketch.ino`, Swagger e aplicativo. Assim, durante o vídeo, basta alternar entre elas.
+
 ## 0:00–0:35 — Apresentação da solução
 
 **Fala sugerida:**
@@ -57,7 +87,7 @@ Mostre brevemente no `sketch.ino`:
 
 > A leitura é enviada em JSON com temperatura, umidade, identificação do sensor e bairro. Quando a API aceita o registro, ela retorna HTTP 201, indicando que a leitura foi criada.
 
-## 1:50–3:20 — Demonstração integrada
+## 1:50–3:30 — Demonstração integrada
 
 1. Inicie a simulação e mostre o autoteste do LED e do buzzer.
 2. No monitor serial, mostre temperatura, umidade e o estado de risco.
@@ -76,7 +106,14 @@ Mostre brevemente no `sketch.ino`:
 
 > Em uma condição normal, os atuadores permanecem desligados. Ao aumentar a temperatura e a umidade, o ESP32 identifica risco alto, acende o LED e ativa o buzzer. A nova leitura também é enviada para a API.
 
-## 3:20–3:55 — Encerramento
+8. Abra rapidamente `GET /api/v1/risk/latest` e mostre o nível `High`.
+9. Volte ao aplicativo e toque em `Atualizar informação`.
+
+**Fala sugerida:**
+
+> O mesmo dado enviado pelo ESP32 é usado pela API para calcular o risco do bairro. Ao atualizar o aplicativo, a informação coletada pelo circuito chega até o usuário, concluindo o fluxo integrado da solução.
+
+## 3:30–3:55 — Encerramento
 
 **Fala sugerida:**
 
@@ -91,5 +128,6 @@ Finalize mostrando o circuito funcionando e o registro correspondente no Swagger
 - LED e buzzer reagindo à condição de risco;
 - retorno `API HTTP: 201`;
 - registro do sensor no `GET /api/v1/readings` do Swagger;
+- risco atualizado no aplicativo;
 - explicação de que a API conecta o ESP32 ao restante da solução.
 
