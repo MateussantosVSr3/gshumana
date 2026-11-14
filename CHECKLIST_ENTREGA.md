@@ -16,7 +16,7 @@
 - [x] Cadastrar cinco Features e dez Test Cases no Azure Boards, com passos e rastreabilidade.
 - [ ] Adicionar o professor como Admin no projeto Azure.
 - [x] Atualizar o relatório de QA com o link/IDs do Azure e gerar novamente o PDF-base.
-- [ ] Inserir os prints reais do Azure em `qa/RELATORIO_QA_FINAL.html` e gerar o PDF final.
+- [x] Inserir os prints reais do Azure em `qa/RELATORIO_QA_FINAL.html` e gerar o PDF final.
 - [x] Circuito publicado e testado no Wokwi: https://wokwi.com/projects/480451288503952385
 - [ ] Gravar vídeos: mobile (até 3 min), IoT (até 4 min), ML (até 5 min), Linux (até 7 min) e pitch geral (até 4 min).
 - [ ] Publicar vídeos como “não listado” e inserir os links nos READMEs.
