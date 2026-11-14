@@ -89,7 +89,8 @@ Dados simulados não são usados no treinamento.
 
 ## Integrantes
 
-- Mateus Santos da Silva — RM 558436
+- Turma: 3ESR
+- Mateus dos Santos da Silva — RM 558436
 - Nickolas Moreno Cardoso — RM 557132
 - André Giovane de Maria — RM 556384
 
@@ -109,4 +110,4 @@ Dados simulados não são usados no treinamento.
 
 ## O que ainda exige ação da equipe
 
-Consulte `CHECKLIST_ENTREGA.md`. Restam à equipe os vídeos e seus links, a confirmação da turma em `iot/integrantes.txt` e a liberação do professor como administrador no Azure DevOps.
+Consulte `CHECKLIST_ENTREGA.md`. Restam à equipe a gravação dos vídeos, a publicação como “não listado” e a inserção dos links nos READMEs.

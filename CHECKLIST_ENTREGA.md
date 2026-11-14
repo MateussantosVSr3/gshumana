@@ -2,7 +2,7 @@
 
 ## Antes de publicar
 
-- [ ] Confirmar a turma dos integrantes (nomes e RMs já preenchidos) e revisar `iot/integrantes.txt`.
+- [x] Turma 3ESR, nomes e RMs confirmados em `iot/integrantes.txt`.
 - [x] Inserir perfil representativo e síntese exploratória em `docs/pesquisa_de_campo.md`.
 - [x] Adicionar imagens públicas referenciadas do Jardim Marquesa em `docs/evidencias/`.
 - [x] Adotar Jardim Marquesa como recorte territorial do projeto.
@@ -14,7 +14,7 @@
 
 - [x] Repositório criado: https://github.com/MateussantosVSr3/gshumana
 - [x] Cadastrar cinco Features e dez Test Cases no Azure Boards, com passos e rastreabilidade.
-- [ ] Adicionar o professor como Admin no projeto Azure.
+- [x] Professor `profandre.leite@fiap.com.br` adicionado como Admin no projeto Azure.
 - [x] Atualizar o relatório de QA com o link/IDs do Azure e gerar novamente o PDF-base.
 - [x] Inserir os prints reais do Azure em `qa/RELATORIO_QA_FINAL.html` e gerar o PDF final.
 - [x] Circuito publicado e testado no Wokwi: https://wokwi.com/projects/480451288503952385

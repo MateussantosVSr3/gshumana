@@ -35,5 +35,5 @@ Todos os Test Cases possuem passos, entrada e resultado esperado no campo nativo
 
 ## Acesso do professor
 
-O convite para `profandre.leite@fiap.com.br` foi tentado, mas o Azure bloqueou usuários externos ao diretório da organização. É necessário habilitar `External guest access` em **Organization settings → Policies** e garantir que o tenant Microsoft Entra permita convites externos antes de repetir o convite.
+O professor `profandre.leite@fiap.com.br` foi adicionado como Admin no projeto Azure.
 

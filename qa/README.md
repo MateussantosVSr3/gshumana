@@ -1,6 +1,6 @@
 # Testing, Compliance & QA
 
-As cinco Features (IDs 13–17) e os dez Test Cases (IDs 18–27) estão cadastrados e relacionados no projeto [gstemperatura](https://dev.azure.com/RM558436/gstemperatura). `features.md` e `test_cases.csv` mantêm as versões detalhadas. Os testes cobrem caixa-preta, positivos e negativos, objetivo, preparo, entrada, passos e saída. Ainda é necessário adicionar o professor como Admin e inserir os prints reais no relatório final.
+As cinco Features (IDs 13–17) e os dez Test Cases (IDs 18–27) estão cadastrados e relacionados no projeto [gstemperatura](https://dev.azure.com/RM558436/gstemperatura). `features.md` e `test_cases.csv` mantêm as versões detalhadas. Os testes cobrem caixa-preta, positivos e negativos, objetivo, preparo, entrada, passos e saída. O professor `profandre.leite@fiap.com.br` já foi adicionado como Admin e os prints reais estão no relatório final.
 
 Depois, substitua os marcadores de prints em `RELATORIO_QA_FINAL.html` pelas evidências reais e gere o PDF com `generate-pdf.ps1`.
 
