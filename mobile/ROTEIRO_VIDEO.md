@@ -15,10 +15,36 @@
    ```powershell
    cd D:\GS\mobile
    npm install
-   npx expo start
+   $env:EXPO_PUBLIC_API_URL="http://IP_DO_COMPUTADOR:5080"
+   npx expo start --lan --clear
    ```
 
+   Escaneie o QR Code com o Expo Go. O celular e o computador precisam estar na mesma rede Wi-Fi.
+
 4. Crie antes uma leitura de 35 °C e 70% pelo Swagger ou pelo ESP32 para que a tela inicial mostre risco alto.
+
+## Sequência exata das telas na gravação
+
+1. **Tela inicial — “Como está o calor agora?”**
+   - mostre `Jardim Marquesa`, o selo `AO VIVO`, o risco `Alto`, a sensação térmica e a orientação;
+   - toque em `Atualizar informação`;
+   - destaque que a leitura veio da API alimentada pelo ESP32.
+2. **Tela “Pontos seguros”**
+   - toque em `Encontrar água e sombra`;
+   - mostre nome, endereço, acessibilidade e estado de validação do ponto;
+   - volte para a tela inicial.
+3. **Tela “Novo relato”**
+   - toque em `Relatar problema no local`;
+   - digite `Ponto sem sombra no período da tarde`;
+   - mostre o contador, o aviso de privacidade e envie o relato;
+   - mostre a confirmação de envio e volte para a tela inicial.
+4. **Tela inicial em modo offline**
+   - somente depois das três jornadas, desligue a API no computador;
+   - toque em `Atualizar informação`;
+   - mostre o aviso de conexão instável e explique o cache SQLite;
+   - religue a API após a demonstração.
+
+Não é necessário abrir código durante o vídeo. Se o tempo permitir, mostre o Swagger por poucos segundos apenas para comprovar a mesma leitura consumida pelo aplicativo.
 
 ## 0:00–0:25 — Problema e solução
 
