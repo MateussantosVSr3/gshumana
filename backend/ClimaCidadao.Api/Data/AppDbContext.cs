@@ -14,7 +14,7 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
         modelBuilder.Entity<SensorReading>().HasIndex(x => new { x.Neighborhood, x.ObservedAtUtc });
         modelBuilder.Entity<AnonymousReport>().HasIndex(x => x.CreatedAtUtc);
         modelBuilder.Entity<SafePoint>().HasData(
-            new SafePoint { Id = 1, Name = "Parque Trianon", Address = "R. Peixoto Gomide, 949", Kind = "sombra", Latitude = -23.5614, Longitude = -46.6560, IsAccessible = true, IsVerified = true },
-            new SafePoint { Id = 2, Name = "Centro Cultural Fiesp", Address = "Av. Paulista, 1313", Kind = "apoio", Latitude = -23.5618, Longitude = -46.6549, IsAccessible = true, IsVerified = false });
+            new SafePoint { Id = 1, Name = "Ponto de apoio — Rua Candelária", Address = "Rua Candelária, 250 — Jardim Marquesa", Kind = "apoio em validação", Latitude = -23.6655, Longitude = -46.7455, IsAccessible = true, IsVerified = false },
+            new SafePoint { Id = 2, Name = "Ponto comunitário — Rua Lagoa Mirim", Address = "Rua Lagoa Mirim, 20 — Jardim Marquesa", Kind = "apoio em validação", Latitude = -23.6665, Longitude = -46.7445, IsAccessible = false, IsVerified = false });
     }
 }

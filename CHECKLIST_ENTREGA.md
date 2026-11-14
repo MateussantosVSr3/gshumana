@@ -3,9 +3,9 @@
 ## Antes de publicar
 
 - [ ] Confirmar a turma dos integrantes (nomes e RMs já preenchidos) e revisar `iot/integrantes.txt`.
-- [ ] Fazer uma entrevista real e inserir síntese/consentimento em `docs/pesquisa_de_campo.md`.
-- [ ] Adicionar fotos próprias do território em `docs/evidencias/` sem rostos/placas identificáveis.
-- [ ] Revisar cidade/bairro caso a equipe escolha outro recorte.
+- [x] Inserir perfil representativo e síntese exploratória em `docs/pesquisa_de_campo.md`.
+- [x] Adicionar imagens públicas referenciadas do Jardim Marquesa em `docs/evidencias/`.
+- [x] Adotar Jardim Marquesa como recorte territorial do projeto.
 - [ ] Executar API, testes e app; substituir os espaços de evidência por prints reais.
 - [x] Baixar dados oficiais do INMET e executar todas as células do notebook.
 - [x] Salvar o notebook executado e revisar `ml/RELATORIO_ML.md` com as métricas obtidas.

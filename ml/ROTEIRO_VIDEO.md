@@ -6,7 +6,7 @@ Abra `clima_cidadao.ipynb` já executado e `RELATORIO_ML.md`. Deixe visíveis a 
 
 ## 0:00–0:35 — Problema
 
-> O módulo de Machine Learning do Clima Cidadão tenta prever se a próxima hora terá calor elevado na região da Bela Vista. Essa previsão pode antecipar recomendações de pausa, água e redução de exposição. É uma regra operacional experimental, não um diagnóstico médico.
+> O módulo de Machine Learning do Clima Cidadão tenta prever se a próxima hora terá calor elevado na região do Jardim Marquesa. Essa previsão pode antecipar recomendações de pausa, água e redução de exposição. É uma regra operacional experimental, não um diagnóstico médico.
 
 ## 0:35–1:15 — Dados reais
 

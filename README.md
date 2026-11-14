@@ -7,7 +7,7 @@
 | Campo | Definição |
 |---|---|
 | Nome | **ClimaCidadão** |
-| Cidade e bairro | São Paulo/SP — Bela Vista e entorno da Av. Paulista |
+| Cidade e bairro | São Paulo/SP — Jardim Marquesa, Zona Sul |
 | Cidadão beneficiado | Idosos, entregadores, ambulantes e demais pessoas expostas ao calor durante deslocamentos e trabalho na rua |
 | Problema, em uma frase | Pessoas vulneráveis ao calor não recebem orientação local e simples, no momento certo, sobre risco térmico, hidratação e locais seguros próximos. |
 | Como funciona | Dados meteorológicos públicos e sensores comunitários alimentam uma API; um modelo estima o risco térmico; o app apresenta alertas acessíveis e pontos de hidratação/sombra, e permite registrar ocorrências sem dados pessoais. |

@@ -21,8 +21,8 @@ public partial class InitialCreate : Migration
         migrationBuilder.Sql("""
             INSERT INTO SafePoints (Id, Address, IsAccessible, IsVerified, Kind, Latitude, Longitude, Name)
             VALUES
-              (1, 'R. Peixoto Gomide, 949', 1, 1, 'sombra', -23.5614, -46.6560, 'Parque Trianon'),
-              (2, 'Av. Paulista, 1313', 1, 0, 'apoio', -23.5618, -46.6549, 'Centro Cultural Fiesp');
+              (1, 'Rua Candelária, 250 — Jardim Marquesa', 1, 0, 'apoio em validação', -23.6655, -46.7455, 'Ponto de apoio — Rua Candelária'),
+              (2, 'Rua Lagoa Mirim, 20 — Jardim Marquesa', 0, 0, 'apoio em validação', -23.6665, -46.7445, 'Ponto comunitário — Rua Lagoa Mirim');
             """);
     }
     protected override void Down(MigrationBuilder migrationBuilder) { migrationBuilder.DropTable("Readings"); migrationBuilder.DropTable("Reports"); migrationBuilder.DropTable("SafePoints"); }

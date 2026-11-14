@@ -2,7 +2,7 @@
 
 ## 0:00–0:35 — território e cidadão
 
-Apresente o local, uma foto própria e a pessoa entrevistada sem identificá-la. Explique a exposição ao calor e a dificuldade de encontrar apoio próximo.
+Apresente o Jardim Marquesa com as imagens públicas referenciadas e o perfil representativo, sem dados pessoais. Explique como as ladeiras, a pouca sombra e a dificuldade de localizar apoio aumentam a exposição ao calor.
 
 ## 0:35–1:05 — problema e hipótese
 

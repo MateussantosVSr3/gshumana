@@ -26,26 +26,26 @@ try {
   Assert-True ($health.Status -eq 200) 'Health retorna HTTP 200'
 
   $valid = Send-Json '/api/v1/readings' 'POST' @{
-    temperatureC = 35; humidityPercent = 70; source = 'qa-script'; neighborhood = 'Bela Vista'
+    temperatureC = 35; humidityPercent = 70; source = 'qa-script'; neighborhood = 'Jardim Marquesa'
   }
   Assert-True ($valid.Status -eq 201) 'TC07 cria leitura válida com HTTP 201'
 
   $invalid = Send-Json '/api/v1/readings' 'POST' @{
-    temperatureC = 35; humidityPercent = 150; source = 'qa-script'; neighborhood = 'Bela Vista'
+    temperatureC = 35; humidityPercent = 150; source = 'qa-script'; neighborhood = 'Jardim Marquesa'
   }
   Assert-True ($invalid.Status -eq 400) 'TC08 rejeita umidade inválida com HTTP 400'
 
-  $filtered = Send-Json '/api/v1/readings?neighborhood=Bela%20Vista&limit=20' 'GET'
+  $filtered = Send-Json '/api/v1/readings?neighborhood=Jardim%20Marquesa&limit=20' 'GET'
   $items = $filtered.Body | ConvertFrom-Json
-  Assert-True ($filtered.Status -eq 200 -and @($items).Count -gt 0 -and @($items | Where-Object neighborhood -ne 'Bela Vista').Count -eq 0) 'TC09 filtra leituras por bairro'
+  Assert-True ($filtered.Status -eq 200 -and @($items).Count -gt 0 -and @($items | Where-Object neighborhood -ne 'Jardim Marquesa').Count -eq 0) 'TC09 filtra leituras por bairro'
 
   $report = Send-Json '/api/v1/reports' 'POST' @{
-    category = 'sem-sombra'; neighborhood = 'Bela Vista'; description = 'Ponto sem cobertura durante a tarde.'
+    category = 'sem-sombra'; neighborhood = 'Jardim Marquesa'; description = 'Ponto sem cobertura durante a tarde.'
   }
   Assert-True ($report.Status -eq 201) 'TC04 aceita relato anônimo válido'
 
   $pii = Send-Json '/api/v1/reports' 'POST' @{
-    category = 'outro'; neighborhood = 'Bela Vista'; description = 'Meu CPF fictício é 123.456.789-00.'
+    category = 'outro'; neighborhood = 'Jardim Marquesa'; description = 'Meu CPF fictício é 123.456.789-00.'
   }
   Assert-True ($pii.Status -eq 400) 'TC06 rejeita relato contendo PII'
 

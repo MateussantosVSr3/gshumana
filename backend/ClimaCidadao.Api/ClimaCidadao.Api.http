@@ -11,7 +11,7 @@ Content-Type: application/json
   "temperatureC": 35,
   "humidityPercent": 70,
   "source": "http-demo-01",
-  "neighborhood": "Bela Vista"
+  "neighborhood": "Jardim Marquesa"
 }
 
 ### Consultar risco
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 {
   "category": "sem-sombra",
-  "neighborhood": "Bela Vista",
+  "neighborhood": "Jardim Marquesa",
   "description": "O ponto de ônibus está sem cobertura durante a tarde."
 }
 
@@ -36,6 +36,6 @@ Content-Type: application/json
 
 {
   "category": "outro",
-  "neighborhood": "Bela Vista",
+  "neighborhood": "Jardim Marquesa",
   "description": "Meu CPF fictício é 123.456.789-00 e quero relatar calor."
 }

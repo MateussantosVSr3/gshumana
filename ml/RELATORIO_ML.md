@@ -2,7 +2,7 @@
 
 ## 1. Problema e dados reais
 
-A CitizenTech atende pessoas expostas ao calor na Bela Vista. A pergunta de ML é: **com as condições meteorológicas atuais, é possível prever se a próxima hora terá calor elevado?** O alvo vale 1 quando, na hora seguinte, a temperatura alcança pelo menos 30 °C. Esse limiar operacional foi adotado após a análise dos dados: a regra inicial de 32 °C com 60% de umidade não produziu nenhum caso positivo em 2024–2025, o que impediria uma avaliação válida. A previsão não é um diagnóstico médico nem substitui alertas oficiais.
+A CitizenTech atende pessoas expostas ao calor no Jardim Marquesa. A pergunta de ML é: **com as condições meteorológicas atuais, é possível prever se a próxima hora terá calor elevado?** O alvo vale 1 quando, na hora seguinte, a temperatura alcança pelo menos 30 °C. Esse limiar operacional foi adotado após a análise dos dados: a regra inicial de 32 °C com 60% de umidade não produziu nenhum caso positivo em 2024–2025, o que impediria uma avaliação válida. A previsão não é um diagnóstico médico nem substitui alertas oficiais.
 
 Foram selecionados dados horários públicos do INMET, estação automática São Paulo–Mirante de Santana (A701), anos 2024 e 2025. Fonte, URLs, período, tratamento e hashes estão em `dados/README.md` e no notebook. O INMET informa que dados automáticos são brutos; `9999`, `Null` e vazios foram tratados como ausentes. Horários permanecem em UTC.
 

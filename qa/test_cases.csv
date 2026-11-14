@@ -5,7 +5,7 @@ TC03,F02,Listar pontos acessíveis,Positivo,API disponível,"Abrir Pontos seguro
 TC04,F03,Enviar relato válido,Positivo,API disponível,"Digitar 20 caracteres; enviar",sem sombra no ponto,HTTP 201 e confirmação sem PII
 TC05,F03,Descrição curta,Negativo,App aberto,"Digitar; enviar",curto,Validação impede envio
 TC06,F03,PII no relato,Negativo,Módulo de segurança ativo,"Enviar relato",CPF 123.456.789-00,PII detectada/mascarada e evento auditado
-TC07,F04,Criar leitura válida,Positivo,API disponível,"POST /readings",35C; 70%; Bela Vista,HTTP 201 e leitura persistida
+TC07,F04,Criar leitura válida,Positivo,API disponível,"POST /readings",35C; 70%; Jardim Marquesa,HTTP 201 e leitura persistida
 TC08,F04,Umidade inválida,Negativo,API disponível,"POST /readings",35C; 150%,HTTP 400 e nenhuma persistência
-TC09,F04,Filtrar por bairro,Positivo,Leituras de dois bairros,"GET com neighborhood",Bela Vista,Lista contém apenas Bela Vista
+TC09,F04,Filtrar por bairro,Positivo,Leituras de dois bairros,"GET com neighborhood",Jardim Marquesa,Lista contém apenas Jardim Marquesa
 TC10,F05,Recuperar processo,Negativo,systemd ativo,"Matar PID; aguardar; chamar health",SIGKILL,Serviço reinicia e health retorna 200

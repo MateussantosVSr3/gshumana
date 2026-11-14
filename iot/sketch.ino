@@ -61,7 +61,7 @@ void loop() {
     String json = "{\"temperatureC\":" + String(value.temperature, 1) +
                   ",\"humidityPercent\":" + String(value.humidity, 1) +
                   ",\"source\":\"wokwi-esp32-01\"" +
-                  ",\"neighborhood\":\"Bela Vista\"}";
+                  ",\"neighborhood\":\"Jardim Marquesa\"}";
 
     Serial.printf("API HTTP: %d\n", http.POST(json));
     http.end();

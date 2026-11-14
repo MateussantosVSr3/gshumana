@@ -62,7 +62,7 @@ Mostre brevemente no `sketch.ino`:
 1. Inicie a simulação e mostre o autoteste do LED e do buzzer.
 2. No monitor serial, mostre temperatura, umidade e o estado de risco.
 3. Aguarde aparecer `API HTTP: 201`.
-4. No Swagger, execute `GET /api/v1/readings`, usando `Bela Vista` como bairro e um limite pequeno.
+4. No Swagger, execute `GET /api/v1/readings`, usando `Jardim Marquesa` como bairro e um limite pequeno.
 5. Mostre que o registro contém `source: wokwi-esp32-01` e os mesmos valores exibidos no Wokwi.
 
 **Fala sugerida:**

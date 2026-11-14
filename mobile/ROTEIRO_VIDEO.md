@@ -22,7 +22,7 @@
 
 ## 0:00–0:25 — Problema e solução
 
-> O Clima Cidadão ajuda pessoas expostas ao calor na Bela Vista a reconhecer o risco térmico, encontrar pontos de água ou sombra e relatar problemas sem fornecer dados pessoais. O aplicativo consome a mesma API alimentada pelo ESP32.
+> O Clima Cidadão ajuda pessoas expostas ao calor no Jardim Marquesa a reconhecer o risco térmico, encontrar pontos de água ou sombra e relatar problemas sem fornecer dados pessoais. O aplicativo consome a mesma API alimentada pelo ESP32.
 
 ## 0:25–1:05 — Tela de risco
 

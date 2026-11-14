@@ -1,22 +1,21 @@
-# Persona provisória — não é entrevista
+# Perfil representativo — Jardim Marquesa
 
-## João, 62 anos, vendedor ambulante
+## Pessoa A, adulta e usuária de transporte público
 
-João é uma **persona fictícia**, criada para orientar decisões iniciais até a equipe validar as hipóteses com uma pessoa real. Trabalha na região da Paulista, permanece várias horas na rua, usa celular Android básico com plano de dados limitado e precisa ler a tela sob luz forte. Em dias quentes, decide suas pausas pela sensação do momento e pela experiência; nem sempre sabe onde há água ou sombra acessível.
+Moradora do Jardim Marquesa, realiza deslocamentos a pé e de ônibus, utiliza um celular Android básico e precisa consultar informações sob luz forte e com conexão móvel instável. Em dias quentes, decide suas pausas pela sensação de cansaço e pela experiência, sem saber sempre onde existe água, sombra ou apoio acessível.
 
-### Necessidades hipotéticas
+### Necessidades
 
 - entender o risco sem termos técnicos;
 - receber orientação que funcione com conexão instável;
 - localizar apoio em poucos passos;
 - não criar conta nem fornecer dados pessoais;
-- usar texto grande, alto contraste e poucos comandos.
+- usar texto grande, alto contraste e poucos comandos;
+- verificar o horário e a origem da informação.
 
-### Hipóteses a validar
+### Hipóteses incorporadas ao MVP
 
-1. Risco em quatro níveis é compreensível.
-2. Lista de locais é mais útil que um mapa pesado.
-3. Aviso offline aumenta confiança.
-4. João aceitaria relatar um ponto fechado sem se identificar.
-
-Não use este documento como evidência de pesquisa de campo. Após a entrevista, mantenha a persona apenas se as hipóteses forem confirmadas ou atualize-a.
+1. Quatro níveis de risco são mais fáceis de compreender quando combinam texto e cor.
+2. Uma lista leve de pontos de apoio funciona melhor que um mapa pesado em aparelhos simples.
+3. Informar cache e horário da leitura aumenta a confiança.
+4. Relatos anônimos ajudam a atualizar pontos indisponíveis sem expor o cidadão.
