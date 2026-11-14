@@ -26,3 +26,9 @@ dotnet run --project ClimaCidadao.Api --urls http://localhost:5080
 ```
 
 O banco SQLite é criado e migrado automaticamente na inicialização. Em 14/11/2026, a solução compilou, os quatro testes xUnit passaram e foram validados: migração, criação/listagem de leitura, cálculo de risco, pontos seguros e Swagger. O enum de risco é serializado como `Low`, `Moderate`, `High` ou `Extreme`, conforme o contrato do aplicativo.
+
+## Evidências visuais
+
+- [Swagger com todos os endpoints](../docs/evidencias/api-swagger.png)
+- [Health check da API](../docs/evidencias/api-health.png)
+- [Leituras filtradas pelo Jardim Marquesa](../docs/evidencias/api-readings.png)

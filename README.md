@@ -43,6 +43,17 @@ ESP32/DHT22 ─────────────> API .NET ─────> S
 Projeto Wokwi publicado: https://wokwi.com/projects/480451288503952385
 - `docs/`: pesquisa, privacidade, roteiros e checklist final.
 
+## Evidências executadas
+
+- [Mobile — risco térmico](docs/evidencias/mobile-risco.png)
+- [Mobile — ponto de apoio](docs/evidencias/mobile-pontos.png)
+- [Mobile — relato anônimo](docs/evidencias/mobile-relatar.png)
+- [API — Swagger](docs/evidencias/api-swagger.png)
+- [API — health check](docs/evidencias/api-health.png)
+- [API — leituras do Jardim Marquesa](docs/evidencias/api-readings.png)
+- [Linux — execução no Ubuntu 24.04.5](docs/evidencias/linux-execucao.png)
+- [QA — relatório final com Azure Boards](qa/RELATORIO_QA.pdf)
+
 ## Execução rápida
 
 ### API (requer .NET 8 SDK)
@@ -98,4 +109,4 @@ Dados simulados não são usados no treinamento.
 
 ## O que ainda exige ação da equipe
 
-Consulte `CHECKLIST_ENTREGA.md`. Os marcadores **PREENCHER** não são falhas técnicas: são informações/evidências pessoais que precisam ser produzidas pela própria equipe.
+Consulte `CHECKLIST_ENTREGA.md`. Restam à equipe os vídeos e seus links, a confirmação da turma em `iot/integrantes.txt` e a liberação do professor como administrador no Azure DevOps.

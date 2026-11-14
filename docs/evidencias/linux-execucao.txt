@@ -1,0 +1,23 @@
+﻿=== SISTEMA ===
+Ubuntu 24.04.5 LTS
+6.18.58.1-microsoft-standard-WSL2
+
+=== SERVIÇO DA API ===
+active
+MainPID=563
+NRestarts=2
+User=climacidadao
+ActiveState=active
+{"status":"healthy","utc":"2026-11-14T19:52:29.0311054+00:00"}
+
+=== MONITORAMENTO ===
+active
+2026-11-14T16:52:22-03:00 cpu=100% mem=8% disk=1% api=ok
+
+=== PROTEÇÕES SYSTEMD ===
+ReadWritePaths=/opt/climacidadao /var/log/climacidadao
+ProtectSystem=strict
+NoNewPrivileges=yes
+
+=== RECUPERAÇÃO APÓS FALHA ===
+{"status":"healthy","utc":"2026-11-14T19:52:37.231374+00:00"}Reinícios antes=2 depois=3

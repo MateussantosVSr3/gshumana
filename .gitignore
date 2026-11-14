@@ -17,3 +17,6 @@ ml/dados/*.zip
 *.log
 GS CitizenTech*.pdf
 iot/sketch/
+/.wsl/
+/.wsl-temp/
+/.tmp-edge-*/

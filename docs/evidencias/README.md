@@ -15,4 +15,21 @@ As imagens são usadas como referência territorial com atribuição; não são 
 
 ## Evidências técnicas
 
-As demais imagens documentam Azure Boards, Swagger, testes, aplicativo, Wokwi e monitoramento.
+### Mobile
+
+- `mobile-risco.png`: risco calculado a partir de uma leitura real da API;
+- `mobile-pontos.png`: ponto de apoio do Jardim Marquesa;
+- `mobile-relatar.png`: formulário de relato anônimo.
+
+### API
+
+- `api-swagger.png`: documentação Swagger e endpoints;
+- `api-health.png`: resposta real do endpoint `/health`;
+- `api-readings.png`: leituras filtradas pelo Jardim Marquesa.
+
+### Linux
+
+- `linux-execucao.txt`: saída real do Ubuntu 24.04.5;
+- `linux-execucao.png`: evidência visual do serviço, monitoramento, proteções e recuperação.
+
+As demais imagens documentam Azure Boards e o território.

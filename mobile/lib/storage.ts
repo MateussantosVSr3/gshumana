@@ -1,9 +1,11 @@
 import * as SQLite from 'expo-sqlite';
+import { Platform } from 'react-native';
 import type { Risk, SafePoint } from './api';
 
-const dbPromise = SQLite.openDatabaseAsync('climacidadao.db');
+const dbPromise = Platform.OS === 'web' ? null : SQLite.openDatabaseAsync('climacidadao.db');
 
 export async function initializeStorage() {
+  if (!dbPromise) return;
   const db = await dbPromise;
   await db.execAsync(`
     PRAGMA journal_mode = WAL;
@@ -16,6 +18,10 @@ export async function initializeStorage() {
 }
 
 async function save(key: string, value: unknown) {
+  if (!dbPromise) {
+    globalThis.localStorage?.setItem(key, JSON.stringify(value));
+    return;
+  }
   const db = await dbPromise;
   await db.runAsync(
     'INSERT OR REPLACE INTO cache (key, payload, saved_at) VALUES (?, ?, ?)',
@@ -26,6 +32,10 @@ async function save(key: string, value: unknown) {
 }
 
 async function load<T>(key: string): Promise<T | null> {
+  if (!dbPromise) {
+    const payload = globalThis.localStorage?.getItem(key);
+    return payload ? JSON.parse(payload) as T : null;
+  }
   const db = await dbPromise;
   const row = await db.getFirstAsync<{ payload: string }>('SELECT payload FROM cache WHERE key = ?', key);
   return row ? JSON.parse(row.payload) as T : null;

@@ -10,12 +10,12 @@ const colors = { Low: '#1B7F5C', Moderate: '#9A6700', High: '#B54708', Extreme: 
 
 export default function Home() {
   const [risk, setRisk] = useState<Risk>(); const [loading, setLoading] = useState(true); const [offline, setOffline] = useState(false);
-  async function load() { setLoading(true); try { const value = await getRisk(); setRisk(value); setOffline(false); await saveRisk(value); } catch { const cached = await loadRisk(); setRisk(cached ?? demo); setOffline(true); } finally { setLoading(false); } }
+  async function load() { setLoading(true); try { const value = await getRisk(); setRisk(value); setOffline(false); void saveRisk(value).catch(console.error); } catch { const cached = await loadRisk(); setRisk(cached ?? demo); setOffline(true); } finally { setLoading(false); } }
   useEffect(() => { load(); }, []);
   if (loading) return <View style={s.center}><ActivityIndicator size="large" accessibilityLabel="Carregando nível de risco" /></View>;
   return <View style={s.page}>
     {offline && <Text style={s.offline} accessibilityRole="alert">Sem conexão — exibindo {risk === demo ? 'demonstração' : 'última leitura salva'}.</Text>}
-    <Text style={s.eyebrow}>BELA VISTA · AGORA</Text>
+    <Text style={s.eyebrow}>JARDIM MARQUESA · AGORA</Text>
     <View style={[s.card, { borderLeftColor: colors[risk!.level] }]} accessible accessibilityLabel={`Risco ${labels[risk!.level]}. Sensação térmica ${risk!.heatIndexC} graus.`}>
       <Text style={s.label}>Risco térmico</Text><Text style={[s.level, { color: colors[risk!.level] }]}>{labels[risk!.level]}</Text>
       <Text style={s.temp}>{risk!.heatIndexC.toFixed(1)} °C</Text><Text style={s.guidance}>{risk!.guidance}</Text>

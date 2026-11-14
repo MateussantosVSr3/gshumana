@@ -6,7 +6,7 @@
 - [x] Inserir perfil representativo e síntese exploratória em `docs/pesquisa_de_campo.md`.
 - [x] Adicionar imagens públicas referenciadas do Jardim Marquesa em `docs/evidencias/`.
 - [x] Adotar Jardim Marquesa como recorte territorial do projeto.
-- [ ] Executar API, testes e app; substituir os espaços de evidência por prints reais.
+- [x] Executar API, testes e app; adicionar prints reais do Mobile, Swagger/API, Azure e Linux.
 - [x] Baixar dados oficiais do INMET e executar todas as células do notebook.
 - [x] Salvar o notebook executado e revisar `ml/RELATORIO_ML.md` com as métricas obtidas.
 
@@ -23,12 +23,12 @@
 
 ## Pacotes por disciplina
 
-- [ ] SOA/Web Services: link do GitHub, Swagger e evidências da API.
+- [x] SOA/Web Services: link do GitHub, Swagger e evidências da API.
 - [x] Cybersecurity: ZIP do módulo e prints do indicador gerados; falta apenas eventual vídeo exigido pelo professor.
 - [x] C#: API, EF Core, LINQ, documentação e quatro testes xUnit validados; falta apenas o envio do link.
 - [ ] ML: `ml/`, `RELATORIO_ML.md` e vídeo.
-- [ ] Mobile: código, Ficha, instruções, prints e vídeo.
-- [ ] Operating Systems: scripts, configs, evidências e vídeo.
+- [ ] Mobile: código, Ficha, instruções e prints concluídos; falta o vídeo.
+- [ ] Operating Systems: scripts, configs e evidências concluídos; falta o vídeo.
 - [ ] Physical Computing: link Wokwi, vídeo e `integrantes.txt`.
 - [ ] Testing/QA: projeto Azure acessível e `qa/RELATORIO_QA.pdf`.
 - [ ] Somente um integrante envia cada tarefa até 19/11/2026 às 23h55.

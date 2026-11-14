@@ -7,6 +7,6 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   if (!response.ok) throw new Error(`API respondeu ${response.status}`);
   return response.json() as Promise<T>;
 }
-export const getRisk = () => request<Risk>('/api/v1/risk/latest?neighborhood=Bela%20Vista');
+export const getRisk = () => request<Risk>('/api/v1/risk/latest?neighborhood=Jardim%20Marquesa');
 export const getSafePoints = () => request<SafePoint[]>('/api/v1/safe-points?accessible=true');
 export const sendReport = (body: { category: string; neighborhood: string; description: string }) => request('/api/v1/reports', { method: 'POST', body: JSON.stringify(body) });
