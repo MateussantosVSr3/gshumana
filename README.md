@@ -33,7 +33,7 @@ ESP32/DHT22 ─────────────> API .NET ─────> S
 ## Estrutura das entregas
 
 - `backend/`: entrega conjunta de SOA/Web Services e C# — API REST, EF Core/SQLite, LINQ, async, Swagger, migração e testes.
-- `ml/`: notebook, documentação dos dados reais, relatório e roteiro do vídeo.
+- `ml/`: notebook executado, documentação dos dados reais e relatório final.
 - `mobile/`: app Expo Router/TypeScript, consumo da API, persistência local e acessibilidade.
 - `iot/`: circuito ESP32 no Wokwi e código para sensor DHT22, LED e buzzer.
 - `infra/`: provisionamento Linux, serviço `systemd`, monitoramento, logs e teste de falha.
@@ -42,6 +42,15 @@ ESP32/DHT22 ─────────────> API .NET ─────> S
 
 Projeto Wokwi publicado: https://wokwi.com/projects/480451288503952385
 - `docs/`: pesquisa, privacidade, roteiros e checklist final.
+
+## Vídeos da entrega
+
+- [Pitch geral — CitizenTech](https://youtu.be/SWXc7I-uzDY)
+- [Cybersecurity — PII, Taint Analysis e Risco Cidadão](https://youtu.be/47J8YEG6wPo)
+- [Mobile Development](https://youtu.be/07oWBHGRnBg)
+- [Physical Computing — ESP32/Wokwi](https://youtu.be/234wiRLxNsg)
+- [Operating Systems — infraestrutura Linux](https://youtu.be/1jhRH4Tc_6c)
+- [Inteligência Artificial & Machine Learning](https://youtu.be/3gwv8aBBhXk)
 
 ## Evidências executadas
 
@@ -108,6 +117,6 @@ Dados simulados não são usados no treinamento.
 - INMET — orientações e limitações dos dados: https://portal.inmet.gov.br/noticias/saiba-como-acessar-os-dados-meteorol%C3%B3gicos-dispon%C3%ADveis-no-site-do-inmet
 - ONU — Objetivos de Desenvolvimento Sustentável: https://brasil.un.org/pt-br/sdgs
 
-## O que ainda exige ação da equipe
+## Conferência final
 
-Consulte `CHECKLIST_ENTREGA.md`. Restam à equipe a gravação dos vídeos, a publicação como “não listado” e a inserção dos links nos READMEs.
+Consulte `CHECKLIST_ENTREGA.md` antes do envio. Os vídeos foram publicados e seus links estão registrados neste README e nos documentos de cada disciplina.

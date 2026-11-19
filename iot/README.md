@@ -11,6 +11,6 @@ O DHT22 mede temperatura/umidade. Em risco local, LED e buzzer alertam; a leitur
 
 Projeto público e testado no Wokwi: https://wokwi.com/projects/480451288503952385
 
-Roteiro da demonstração integrada (Wokwi, API e Swagger): [`ROTEIRO_VIDEO.md`](ROTEIRO_VIDEO.md).
+Vídeo publicado como não listado: [demonstração do ESP32 integrado ao Clima Cidadão](https://youtu.be/234wiRLxNsg).
 
 O circuito executa um autoteste de LED e buzzer ao iniciar. Depois, mantém os dois atuadores ligados quando a temperatura alcança 35 °C ou quando há pelo menos 32 °C com umidade igual ou superior a 60%.

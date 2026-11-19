@@ -19,8 +19,6 @@ O projeto foi validado com TypeScript, 18 verificações do Expo Doctor e geraç
 - [Ponto de apoio do Jardim Marquesa](../docs/evidencias/mobile-pontos.png)
 - [Formulário de relato anônimo](../docs/evidencias/mobile-relatar.png)
 
-## Roteiro do vídeo (até 3 min)
+## Vídeo de demonstração
 
-Use [`ROTEIRO_VIDEO.md`](ROTEIRO_VIDEO.md) para demonstrar API, três telas, SQLite offline, acessibilidade e privacidade.
-
-As três telas foram executadas e registradas. Falta inserir aqui o link do vídeo não listado.
+Vídeo publicado como não listado: [demonstração do aplicativo Mobile](https://youtu.be/07oWBHGRnBg).
