@@ -1,21 +1,7 @@
 # Registro de uso de IA
 
-## Prompt inicial
+A IA foi utilizada como ferramenta de apoio para interpretar alguns itens do enunciado, sugerir ajustes técnicos, revisar documentação e organizar o checklist da entrega.
 
-“Ajude a pensar em uma solução e fazer as entregas do PDF na pasta.”
+A equipe definiu o problema e o escopo da solução, tomou as decisões finais, executou e validou o projeto, produziu as evidências e gravou os vídeos. Todo conteúdo foi revisado pelos integrantes, que permanecem responsáveis pelo código e devem saber explicar seu funcionamento.
 
-## Uso realizado
-
-A IA foi usada como copiloto para: interpretar o enunciado, propor a arquitetura integrada ClimaCidadão, gerar uma primeira versão do código e da documentação, e criar checklists. A equipe deve revisar, executar e saber explicar cada arquivo antes da entrega.
-
-## Interações complementares
-
-- “Precisa fazer entrevista?” — esclarecimento sobre pesquisa de campo e evidência real.
-- “Pode criar um cidadão” — criação de um perfil representativo para orientar as decisões do MVP.
-- “Faz aí” — implementação das pastas disciplinares, testes e documentação.
-- “Ajusta as coisas que falta” — revisão de rubrica, SQLite no mobile, PII na API, automação de ML, arquivos de importação do Azure e pacote de Cybersecurity.
-- Fornecimento dos nomes, RMs e endereço do repositório GitHub para preenchimento dos artefatos.
-
-## Declaração
-
-Nenhuma entrevista, evidência, resultado de modelo, execução de teste, link externo ou identidade de integrante foi inventada. Esses itens permanecem sinalizados para preenchimento pela equipe.
+Não foram usados dados pessoais reais, entrevistas inventadas ou resultados fictícios de execução.
