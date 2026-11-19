@@ -4,13 +4,17 @@ After=network-online.target
 Wants=network-online.target
 [Service]
 Type=simple
+# Princípio do menor privilégio: usuário de sistema sem login.
 User=climacidadao
 Group=climacidadao
 WorkingDirectory=/opt/climacidadao
 ExecStart=/usr/bin/dotnet /opt/climacidadao/ClimaCidadao.Api.dll
+# Disponibiliza a API na porta 5080 das interfaces da VM.
 Environment=ASPNETCORE_URLS=http://0.0.0.0:5080
+# Recuperação automática quando o processo termina com falha.
 Restart=on-failure
 RestartSec=5
+# Endurecimento do serviço e escrita limitada aos diretórios necessários.
 NoNewPrivileges=true
 ProtectSystem=strict
 ReadWritePaths=/opt/climacidadao /var/log/climacidadao

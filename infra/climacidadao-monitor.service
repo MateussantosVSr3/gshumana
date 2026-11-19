@@ -1,11 +1,16 @@
 [Unit]
 Description=Monitor ClimaCidadao
-After=climacidadao.service
+# Aguarda rede e ordem de inicialização da API.
+After=network-online.target climacidadao.service
+Wants=network-online.target
 [Service]
 Type=simple
 User=climacidadao
 Group=climacidadao
+# Evita um falso alerta enquanto a API conclui o primeiro startup.
+ExecStartPre=/bin/sleep 5
 ExecStart=/usr/local/bin/climacidadao-monitor
+# O próprio monitor também é tolerante a falhas.
 Restart=always
 RestartSec=5
 NoNewPrivileges=true

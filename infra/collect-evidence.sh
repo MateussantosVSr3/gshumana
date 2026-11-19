@@ -7,6 +7,14 @@ echo "$PRETTY_NAME"
 uname -r
 echo
 
+echo "=== REDE, DNS E IP ==="
+echo "hostname=$(hostname)"
+echo "ip=$(hostname -I | awk '{print $1}')"
+ip route show default | head -n 1
+awk '/^nameserver/ {print "dns=" $2}' /etc/resolv.conf
+getent hosts climacidadao
+echo
+
 echo "=== SERVIÇO DA API ==="
 systemctl is-active climacidadao
 systemctl show climacidadao -p User -p MainPID -p NRestarts -p ActiveState
