@@ -10,6 +10,9 @@
     table { border-collapse: collapse; width: 100%; font-size: 11px; }
     th, td { border: 1px solid #999; padding: 5px; vertical-align: top; }
     th { background: #dff3f4; }
+    tr { page-break-inside: avoid; }
+    .details { font-size: 9px; }
+    .details td, .details th { padding: 4px; }
     figure { margin: 14px 0 22px; page-break-inside: avoid; }
     figure img { width: 100%; border: 1px solid #8aa; border-radius: 3px; }
     figcaption { margin-top: 5px; color: #4a6269; font-size: 11px; text-align: center; }
@@ -21,6 +24,8 @@
   <p><b>Turma:</b> 3ESR.</p>
   <p><b>Equipe:</b> Mateus dos Santos da Silva (RM 558436), Nickolas Moreno Cardoso (RM 557132), André Giovane de Maria (RM 556384).</p>
   <p><b>Azure Boards:</b> <a href="https://dev.azure.com/RM558436/gstemperatura">https://dev.azure.com/RM558436/gstemperatura</a></p>
+  <p><b>Acesso do professor:</b> <code>profandre.leite@fiap.com.br</code> adicionado como administrador do projeto.</p>
+  <p><b>Pitch geral:</b> <a href="https://youtu.be/SWXc7I-uzDY">https://youtu.be/SWXc7I-uzDY</a></p>
 
   <h2>Escopo</h2>
   <p>Homologação das jornadas de risco térmico, pontos seguros, relato anônimo, sensor e resiliência operacional.</p>
@@ -36,6 +41,17 @@
     <figcaption>Feature 13: descrição e critérios de aceitação.</figcaption>
   </figure>
 
+  <h2 class="break">Detalhes das Features cadastradas</h2>
+  <p>Dados conferidos diretamente no Azure Boards. Os IDs abaixo são links para os respectivos Work Items.</p>
+  <table class="details">
+    <tr><th>ID</th><th>Feature</th><th>Descrição</th><th>Critérios de aceite</th><th>Test Cases</th></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/13">#13</a></td><td>Consultar risco térmico</td><td>Exibir nível, sensação térmica, horário e orientação ao cidadão.</td><td>Com leitura válida, a tela deve apresentar nível e orientação. Falha da API deve identificar cache/demonstração. O nível não pode depender somente de cor.</td><td>#18–#19</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/14">#14</a></td><td>Encontrar ponto seguro</td><td>Listar água, sombra e apoio acessível.</td><td>Mostrar nome, endereço, tipo, acessibilidade e verificação. Ponto não verificado deve ser rotulado.</td><td>#20</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/15">#15</a></td><td>Relatar problema anonimamente</td><td>Permitir relato sem conta ou identificação.</td><td>Descrição entre 10 e 280 caracteres. Não solicitar PII. Bloquear CPF, e-mail, telefone e CEP.</td><td>#21–#23</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/16">#16</a></td><td>Ingerir leitura do sensor</td><td>Receber temperatura e umidade do ESP32.</td><td>Leitura válida retorna HTTP 201. Valores fora dos limites retornam HTTP 400 e não são persistidos.</td><td>#24–#26</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/17">#17</a></td><td>Manter serviço disponível</td><td>Monitorar e reiniciar a API após falha.</td><td>Serviço inicia no boot, reinicia após falha e registra CPU, memória, disco e saúde.</td><td>#27</td></tr>
+  </table>
+
   <h2 class="break">Test Cases</h2>
   <p>Os dez casos de caixa-preta, positivos e negativos, estão documentados em <code>test_cases.csv</code> e cadastrados com os IDs 18 a 27. Todos possuem passos, entradas, resultados esperados e relação <i>Tested By</i> com a Feature correspondente.</p>
   <figure>
@@ -46,6 +62,22 @@
     <img src="../docs/evidencias/qa-azure-test-case-18.png" alt="Passos, entrada e resultado esperado do Test Case 18">
     <figcaption>Test Case 18: passos, entrada e resultado esperado cadastrados.</figcaption>
   </figure>
+
+  <h2 class="break">Detalhes dos Test Cases cadastrados</h2>
+  <p>Casos funcionais de caixa-preta, positivos e negativos. Cada ID aponta para o cadastro real no Azure Boards.</p>
+  <table class="details">
+    <tr><th>ID</th><th>Feature</th><th>Caso e tipo</th><th>Preparação e passos</th><th>Entrada</th><th>Resultado esperado</th></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/18">#18</a></td><td>#13</td><td>Exibir risco vigente<br>Positivo</td><td>API com leitura válida. Abrir o app e atualizar.</td><td>35 °C e 70%</td><td>Nível, sensação térmica, horário e orientação apresentados.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/19">#19</a></td><td>#13</td><td>API indisponível<br>Negativo</td><td>Desligar a API e abrir o app.</td><td>Sem rede</td><td>Aviso offline e dado identificado como salvo ou demonstrativo.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/20">#20</a></td><td>#14</td><td>Listar pontos acessíveis<br>Positivo</td><td>API disponível. Abrir “Pontos seguros”.</td><td><code>accessible=true</code></td><td>Pontos acessíveis com endereço, tipo e estado de verificação.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/21">#21</a></td><td>#15</td><td>Enviar relato válido<br>Positivo</td><td>Abrir o formulário, preencher e enviar.</td><td>Descrição anônima com 20 caracteres</td><td>HTTP 201 e confirmação sem armazenamento de PII.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/22">#22</a></td><td>#15</td><td>Rejeitar descrição curta<br>Negativo</td><td>Abrir o formulário, digitar e tentar enviar.</td><td>Texto com menos de 10 caracteres</td><td>Validação impede o envio.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/23">#23</a></td><td>#15</td><td>Rejeitar PII<br>Negativo</td><td>Enviar relato contendo dado pessoal fictício.</td><td>CPF 123.456.789-00</td><td>HTTP 400, indicação para remover PII e nenhuma persistência.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/24">#24</a></td><td>#16</td><td>Criar leitura válida<br>Positivo</td><td>Enviar leitura pelo endpoint do sensor.</td><td>35 °C, 70%, Jardim Marquesa</td><td>HTTP 201 e leitura persistida.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/25">#25</a></td><td>#16</td><td>Rejeitar umidade inválida<br>Negativo</td><td>Enviar leitura fora dos limites.</td><td>35 °C e 150%</td><td>HTTP 400 e nenhuma persistência.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/26">#26</a></td><td>#16</td><td>Filtrar por bairro<br>Positivo</td><td>Preparar leituras de dois bairros e consultar com filtro.</td><td><code>neighborhood=Jardim Marquesa</code></td><td>Somente leituras do bairro solicitado.</td></tr>
+    <tr><td><a href="https://dev.azure.com/RM558436/gstemperatura/_workitems/edit/27">#27</a></td><td>#17</td><td>Recuperar após falha<br>Negativo</td><td>Com systemd ativo, encerrar o PID, aguardar e consultar <code>/health</code>.</td><td><code>SIGKILL</code></td><td>systemd reinicia o serviço e a API retorna HTTP 200.</td></tr>
+  </table>
 
   <h2>Rastreabilidade</h2>
   <table>
@@ -58,7 +90,7 @@
   </table>
 
   <h2>Conclusão</h2>
-  <p>A estrutura de homologação foi cadastrada no Azure Boards: cinco Features, dez Test Cases e rastreabilidade entre requisitos e testes. Na validação local, a API compilou, quatro testes xUnit passaram e os fluxos de saúde, leitura válida e inválida, filtro por bairro, relato anônimo, bloqueio de PII, pontos acessíveis, risco e Swagger foram aprovados. A homologação final depende das evidências visuais do aplicativo e do teste de recuperação na VM Ubuntu.</p>
+  <p>A estrutura de homologação foi cadastrada no Azure Boards: cinco Features, dez Test Cases e rastreabilidade entre requisitos e testes. Todos os itens possuem descrição, critérios ou passos, entradas e resultados esperados. Na validação local, a API compilou, quatro testes xUnit passaram e os fluxos de saúde, leitura válida e inválida, filtro por bairro, relato anônimo, bloqueio de PII, pontos acessíveis, risco e Swagger foram aprovados. O teste de recuperação foi validado no ambiente Ubuntu com systemd.</p>
 </body>
 </html>
 
