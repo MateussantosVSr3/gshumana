@@ -2,6 +2,17 @@
 
 A mesma API atende às duas disciplinas: domínio explícito, DI, EF Core/SQLite, consultas LINQ, operações assíncronas, REST, Swagger, migração e testes xUnit.
 
+## Integrantes
+
+- Turma: 3ESR
+- Mateus dos Santos da Silva — RM 558436
+- Nickolas Moreno Cardoso — RM 557132
+- André Giovane de Maria — RM 556384
+
+## Descrição da solução
+
+O backend do Clima Cidadão recebe leituras ambientais do ESP32, persiste os dados em SQLite, calcula o risco térmico mais recente, disponibiliza pontos de água ou sombra e recebe relatos anônimos protegidos contra dados pessoais. A API integra o circuito IoT e o aplicativo Mobile da CitizenTech.
+
 ## Endpoints
 
 | Método | Rota | Uso |
@@ -32,3 +43,13 @@ O banco SQLite é criado e migrado automaticamente na inicialização. Em 14/11/
 - [Swagger com todos os endpoints](../docs/evidencias/api-swagger.png)
 - [Health check da API](../docs/evidencias/api-health.png)
 - [Leituras filtradas pelo Jardim Marquesa](../docs/evidencias/api-readings.png)
+
+## Relação com os critérios de SOA
+
+| Critério | Implementação |
+|---|---|
+| Estruturação do domínio | Entidades `SensorReading`, `SafePoint` e `AnonymousReport`, serviços e contratos organizados por responsabilidade. |
+| Conexão com banco de dados | Entity Framework Core com SQLite por meio de `AppDbContext`. |
+| Migrações | Migração `InitialCreate` versionada e aplicada automaticamente na inicialização. |
+| Documentação automática | Swagger/OpenAPI gerado pela aplicação e contrato adicional em `openapi.yaml`. |
+| Testes automatizados | Projeto xUnit com quatro testes aprovados e nenhuma falha. |
